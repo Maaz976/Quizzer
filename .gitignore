@@ -1,0 +1,10 @@
+# OS files
+*.png
+*.pdf
+*.xopp
+
+# Database dumps 
+*.sql
+
+# Docker runtime noise
+*.log
