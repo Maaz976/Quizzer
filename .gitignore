@@ -3,8 +3,6 @@
 *.pdf
 *.xopp
 
-# Database dumps 
-*.sql
 
 # Ignore Linux system files
 .DS_Store
@@ -12,3 +10,12 @@ Thumbs.db
 
 # Docker runtime noise
 *.log
+
+# SSH Key files
+*.pem
+
+# Ignore vs code files
+.vscode/
+.idea/
+
+
