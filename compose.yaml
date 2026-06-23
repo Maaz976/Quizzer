@@ -1,0 +1,22 @@
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: Quizzer
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+
+  quizzer-web:
+    image: ghcr.io/maaz976/quizzer-web:1.1
+    environment:
+      DB_HOST: mysql
+      DB_NAME: Quizzer
+      DB_USER: root
+      DB_PASS: root123
+    ports:
+      - "8080:80"
+
+volumes:
+  mysql-data:
