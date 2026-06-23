@@ -16,7 +16,7 @@ services:
       DB_USER: root
       DB_PASS: root123
     ports:
-      - "8080:80"
+      - "80:80"
 
 volumes:
   mysql-data:
